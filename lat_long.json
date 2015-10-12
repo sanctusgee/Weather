@@ -1,0 +1,236 @@
+//request = http://api.wunderground.com/api/153626f991108b95/geolookup/q/37.776289,-122.395234.json
+
+{
+    "response": {
+        "version": "0.1",
+        "termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
+        "features": {
+            "geolookup": 1
+        }
+    },
+    "location": {
+        "type": "CITY",
+        "country": "US",
+        "country_iso3166": "US",
+        "country_name": "USA",
+        "state": "CA",
+        "city": "San Francisco",
+        "tz_short": "PDT",
+        "tz_long": "America/Los_Angeles",
+        "lat": "37.770000",
+        "lon": "-122.390000",
+        "zip": "94105",
+        "magic": "1",
+        "wmo": "99999",
+        "l": "/q/zmw:94105.1.99999",
+        "requesturl": "US/CA/San_Francisco.html",
+        "wuiurl": "http://www.wunderground.com/US/CA/San_Francisco.html",
+        "nearby_weather_stations": {
+            "airport": {
+                "station": [
+                    {
+                        "city": "Oakland",
+                        "state": "CA",
+                        "country": "US",
+                        "icao": "KOAK",
+                        "lat": "37.71780014",
+                        "lon": "-122.23294067"
+                    },
+                    {
+                        "city": "San Francisco",
+                        "state": "CA",
+                        "country": "US",
+                        "icao": "KSFO",
+                        "lat": "37.61960983",
+                        "lon": "-122.36557770"
+                    },
+                    {
+                        "city": "Hayward",
+                        "state": "CA",
+                        "country": "US",
+                        "icao": "KHWD",
+                        "lat": "37.65891647",
+                        "lon": "-122.12174988"
+                    },
+                    {
+                        "city": "Half Moon Bay",
+                        "state": "CA",
+                        "country": "US",
+                        "icao": "KHAF",
+                        "lat": "37.51361084",
+                        "lon": "-122.49958801"
+                    }
+                ]
+            },
+            "pws": {
+                "station": [
+                    {
+                        "neighborhood": "South of Market",
+                        "city": "San Francisco",
+                        "state": "CA",
+                        "country": "US",
+                        "id": "KCASANFR472",
+                        "lat": 37.776436,
+                        "lon": -122.393166,
+                        "distance_km": 0,
+                        "distance_mi": 0
+                    },
+                    {
+                        "neighborhood": "South of Market",
+                        "city": "San Francisco",
+                        "state": "CA",
+                        "country": "US",
+                        "id": "KCASANFR355",
+                        "lat": 37.776611,
+                        "lon": -122.39399,
+                        "distance_km": 0,
+                        "distance_mi": 0
+                    },
+                    {
+                        "neighborhood": "SOMA South Park",
+                        "city": "San Francisco",
+                        "state": "CA",
+                        "country": "US",
+                        "id": "KCASANFR327",
+                        "lat": 37.782135,
+                        "lon": -122.393753,
+                        "distance_km": 1,
+                        "distance_mi": 0
+                    },
+                    {
+                        "neighborhood": "South Beach",
+                        "city": "San Francisco",
+                        "state": "CA",
+                        "country": "US",
+                        "id": "KCASANFR410",
+                        "lat": 37.782864,
+                        "lon": -122.390015,
+                        "distance_km": 1,
+                        "distance_mi": 0
+                    },
+                    {
+                        "neighborhood": "South of Market",
+                        "city": "San Francisco",
+                        "state": "CA",
+                        "country": "US",
+                        "id": "KCASANFR486",
+                        "lat": 37.781174,
+                        "lon": -122.399551,
+                        "distance_km": 1,
+                        "distance_mi": 0
+                    },
+                    {
+                        "neighborhood": "South Beach",
+                        "city": "San Francisco",
+                        "state": "CA",
+                        "country": "US",
+                        "id": "KCASANFR474",
+                        "lat": 37.783089,
+                        "lon": -122.394592,
+                        "distance_km": 1,
+                        "distance_mi": 0
+                    },
+                    {
+                        "neighborhood": "South Beach",
+                        "city": "San Francisco",
+                        "state": "CA",
+                        "country": "US",
+                        "id": "KCASANFR313",
+                        "lat": 37.783634,
+                        "lon": -122.398102,
+                        "distance_km": 1,
+                        "distance_mi": 1
+                    },
+                    {
+                        "neighborhood": "SOMA",
+                        "city": "San Francisco",
+                        "state": "CA",
+                        "country": "US",
+                        "id": "KCASANFR131",
+                        "lat": 37.778488,
+                        "lon": -122.408005,
+                        "distance_km": 1,
+                        "distance_mi": 1
+                    },
+                    {
+                        "neighborhood": "South Beach",
+                        "city": "San Francisco",
+                        "state": "CA",
+                        "country": "US",
+                        "id": "KCASANFR479",
+                        "lat": 37.789665,
+                        "lon": -122.389977,
+                        "distance_km": 2,
+                        "distance_mi": 1
+                    },
+                    {
+                        "neighborhood": "SOMA - Near Van Ness",
+                        "city": "San Francisco",
+                        "state": "CA",
+                        "country": "US",
+                        "id": "KCASANFR58",
+                        "lat": 37.773285,
+                        "lon": -122.417725,
+                        "distance_km": 2,
+                        "distance_mi": 1
+                    },
+                    {
+                        "neighborhood": "Financial District",
+                        "city": "San Francisco",
+                        "state": "CA",
+                        "country": "US",
+                        "id": "KCASANFR102",
+                        "lat": 37.793579,
+                        "lon": -122.39933,
+                        "distance_km": 2,
+                        "distance_mi": 1
+                    },
+                    {
+                        "neighborhood": "Weather Underground HQ",
+                        "city": "San Francisco",
+                        "state": "CA",
+                        "country": "US",
+                        "id": "KCASANFR236",
+                        "lat": 37.793293,
+                        "lon": -122.404442,
+                        "distance_km": 2,
+                        "distance_mi": 1
+                    },
+                    {
+                        "neighborhood": "NOS_PORTS",
+                        "city": "San Francisco",
+                        "state": "CA",
+                        "country": "US",
+                        "id": "MPXOC1",
+                        "lat": 37.798,
+                        "lon": -122.392975,
+                        "distance_km": 3,
+                        "distance_mi": 1
+                    },
+                    {
+                        "neighborhood": "Nob Hill",
+                        "city": "San Francisco",
+                        "state": "CA",
+                        "country": "US",
+                        "id": "KCASANFR299",
+                        "lat": 37.792068,
+                        "lon": -122.412369,
+                        "distance_km": 3,
+                        "distance_mi": 1
+                    },
+                    {
+                        "neighborhood": "Nob Hill",
+                        "city": "San Francisco",
+                        "state": "CA",
+                        "country": "US",
+                        "id": "KCASANFR575",
+                        "lat": 37.792255,
+                        "lon": -122.415962,
+                        "distance_km": 3,
+                        "distance_mi": 2
+                    }
+                ]
+            }
+        }
+    }
+}

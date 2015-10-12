@@ -1,0 +1,16 @@
+ChangeText:
+
+<ChangeText>
+    textbox: textbox
+    label_text: label_text
+    orientation: 'vertical'
+
+    Button:
+        text: "Click Me"
+    Label:
+        id: label_text
+        text: "Before"
+    TextInput:
+        id: textbox
+        on_text_validate: self.change_label()
+
