@@ -27,6 +27,7 @@ class AddLocationForm(BoxLayout):
 
         # WeatherUnderground (http://www.wunderground.com) API implementation
         # search_template = "http://api.wunderground.com/api/xxxxxxxxxxxxxxxxx/conditions/q/{}.json"
+
         search_url = search_template.format(self.search_input.text, self.open_weather_id)
         request = UrlRequest(search_url, self.found_location)
 
