@@ -20,8 +20,7 @@ class AddLocationForm(BoxLayout):
             print(self.current_location.state)
 
     def search_location(self):
-
-        # OPenWeatherMap API implementation
+        # OpenWeatherMap (http://openweathermap.org/) API implementation
         search_template = "http://api.openweathermap.org/data/2.5/find?q={}&" \
                           "type=like&APPID={}"
 
@@ -34,19 +33,11 @@ class AddLocationForm(BoxLayout):
     def found_location(self, request, data):
 
         # WeatherUnderground (http://www.wunderground.com) API implementation
-        data = json.loads(data.decode()) if not isinstance(data, dict) else data
+        # data = json.loads(data.decode()) if not isinstance(data, dict) else data
         # cities = [ "{}-{}, ({})".format(d["city"], d["state"], d["country"]) for d in data["response"]["results"]]
         # self.search_results.item_strings = cities
 
-        # # check which button pressed:
-        # if self.search_button.state == 'down':    # 'search location' button pressed
-        #     # OPenWeatherMap API implementation
-        #     cities = ["{} ({})". format(d['name'], d['sys']['country']) for d in data['list']]
-        #     self.search_results.item_strings = cities
-        # if self.current_location.state == 'down':
-        #     cities = ["{} - Lat: {}, Long: {}".format(d['name'], d['coord']['lat'], d['coord']['lon'])
-        #               for d in data['list']]
-        #     self.search_results.item_strings = cities
+        # OpenWeatherMap (http://openweathermap.org/) API implementation
         data = json.loads(data.decode()) if not isinstance(data, dict) else data
         cities = ["{} ({})". format(d['name'], d['sys']['country']) for d in data['list']]
         self.search_results.item_strings = cities
