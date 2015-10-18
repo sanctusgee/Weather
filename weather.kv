@@ -2,15 +2,15 @@
 #: import ListItemButton kivy.uix.listview.ListItemButton
 #: import ListAdapter kivy.adapters.listadapter.ListAdapter
 
-WeatherRoot:
+## WeatherRoot:
 
-<WeatherRoot>
-    AddLocationForm:
-        orientation: "vertical"
-        search_input: search_box
-        search_results: search_results_list
-        current_location: curr_loc
-        search_button: search_btn
+#<WeatherRoot>
+AddLocationForm:
+    orientation: "vertical"
+    search_input: search_box
+    search_results: search_results_list
+    current_location: curr_loc
+    #search_button: search_btns
 
     BoxLayout:
         height: "40dp"
@@ -32,8 +32,8 @@ WeatherRoot:
             on_press: root.search_location()
     ListView:
         id: search_results_list
-        adapter:
-            ListAdapter(data=[], cls=ListItemButton)
+        #adapter:
+        #    ListAdapter(data=[], cls=ListItemButton)
         #item_strings: []
 
 
