@@ -35,8 +35,7 @@ WeatherRoot:
         ListView:
             id: search_results_list
             adapter:
-                ListAdapter(data=[], cls=main.LocationButton)
-            #item_strings: []
+                ListAdapter(data=[], cls=main.LocationButton, args_converter=location_form.args_converter)
         Button:
             height: "40dp"
             size_hint_y: None
@@ -45,18 +44,21 @@ WeatherRoot:
 
 
 <LocationButton>:
-    # background_color: (1.0, 0.0, 0.0, 1.0)
-    on_press: app.root.show_current_weather(self.text);
+    text: "{} ({})".format(self.location[0], self.location[1])
+    height: "40dp"
+    size_hint_y: None
+    on_press: app.root.show_current_weather(self.location)
 
-<CurrentWeather@BoxLayout>:
-    location: ""
-    conditions: None
-    temp: None
-    temp_min: None
-    temp_max: None
+
+<CurrentWeather>:
+#    location: ['New York', 'US']
+#    conditions: None
+#    temp: None
+#    temp_min: None
+#    temp_max: None
     orientation: "vertical"
     Label:
-        text: root.location
+        text: "{} ({})".format(root.location[0], root.location[1])
     BoxLayout:
         orientation: "horizontal"
         size_hint_y: None
