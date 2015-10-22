@@ -1,4 +1,4 @@
-# from kivy.factory import Factory
+from kivy.factory import Factory
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import ObjectProperty, ListProperty, StringProperty, NumericProperty
@@ -89,10 +89,10 @@ class CurrentWeather(BoxLayout):
 
     def update_weather(self):
         weather_template = "http://api.openweathermap.org/data/2.5/" \
-                           "weather?q={}, {}&units=metric&appid={}"
+                           "weather?q={}, {}&units=metric&appid=bc0ce1591b42ea74e8643d8b4bb3990f"
         ## put back *self.location
-        weather_url = weather_template.format(self.location, self.open_weather_id)
-        request = UrlRequest( weather_url, self.weather_retrieved)
+        weather_url = weather_template.format(*self.location )
+        request = UrlRequest(weather_url, self.weather_retrieved)
 
     def weather_retrieved( self, request, data):
         data = json.loads(data.decode()) if not isinstance(data, dict) else data
