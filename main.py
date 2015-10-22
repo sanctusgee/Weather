@@ -14,13 +14,15 @@ class WeatherRoot(BoxLayout):
     def show_current_weather(self, location=None):
         self.clear_widgets()
 
-        if location is None and self.current_weather is None:
+        #if location is None and \
+        if self.current_weather is None:
             # location = ("New York",  "US")
-            self.current_weather = CurrentWeather(location=location)
+            self.current_weather = CurrentWeather()
 
         if location is not None:
             # self.current_weather = Factory.CurrentWeather()
             self.current_weather.location = location
+            self.current_weather.update_weather()
             self.add_widget(self.current_weather)
 
     def show_add_location_form(self):
