@@ -7,6 +7,7 @@ import json
 from config.api_keys import api_keys
 from kivy.uix.listview import ListItemButton
 
+OPEN_WEATHER_ID = api_keys['OPEN_WEATHER_MAP']
 
 class WeatherRoot(BoxLayout):
     current_weather = ObjectProperty()
@@ -36,7 +37,7 @@ class LocationButton(ListItemButton):
 
 
 class AddLocationForm(BoxLayout):
-    open_weather_id = api_keys['OPEN_WEATHER_MAP']
+    global OPEN_WEATHER_ID
 
     search_input = ObjectProperty()
     search_results = ObjectProperty()
@@ -51,7 +52,7 @@ class AddLocationForm(BoxLayout):
         # WeatherUnderground (http://www.wunderground.com) API implementation
         # search_template = "http://api.wunderground.com/api/xxxxxxxxxxxxxxxxx/conditions/q/{}.json"
 
-        search_url = search_template.format(self.search_input.text, self.open_weather_id)
+        search_url = search_template.format(self.search_input.text, OPEN_WEATHER_ID)
         request = UrlRequest(search_url, self.found_location)
 
     def found_location(self, request, data):
@@ -80,7 +81,8 @@ class AddLocationForm(BoxLayout):
 
 
 class CurrentWeather(BoxLayout):
-    open_weather_id = api_keys['OPEN_WEATHER_MAP']
+    global OPEN_WEATHER_ID
+
     location = ListProperty(['New York', 'US'])
     conditions = StringProperty()
     temp = NumericProperty()
@@ -89,17 +91,17 @@ class CurrentWeather(BoxLayout):
 
     def update_weather(self):
         weather_template = "http://api.openweathermap.org/data/2.5/" \
-                           "weather?q={}, {}&units=metric&appid=bc0ce1591b42ea74e8643d8b4bb3990f"
+                           "weather?q={},{}&units=metric&appid="+OPEN_WEATHER_ID
         ## put back *self.location
-        weather_url = weather_template.format(*self.location )
+        weather_url = weather_template.format(*self.location)
         request = UrlRequest(weather_url, self.weather_retrieved)
 
     def weather_retrieved( self, request, data):
         data = json.loads(data.decode()) if not isinstance(data, dict) else data
-        self.conditions = data[' weather'][ 0][' description']
-        self.temp = data[' main'][' temp']
-        self.temp_min = data[' main'][' temp_min']
-        self.temp_max = data[' main'][' temp_max']
+        self.conditions = data['weather'][0]['description']
+        self.temp = data['main']['temp']
+        self.temp_min = data['main']['temp_min']
+        self.temp_max = data['main']['temp_max']
 
 class WeatherApp(App):
     pass
