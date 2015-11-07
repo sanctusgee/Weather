@@ -1,6 +1,5 @@
 from kivy.network.urlrequest import UrlRequest
 import json
-
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import (ObjectProperty, ListProperty, StringProperty,
@@ -54,6 +53,7 @@ class AddLocationForm(BoxLayout):
         self.search_results.adapter.data.extend(cities)
         self.search_results._trigger_reset_populate()
 
+
 class CurrentWeather(BoxLayout):
     global OPEN_WEATHER_ID
     location = ListProperty(['New York', 'US'])
@@ -78,6 +78,7 @@ class CurrentWeather(BoxLayout):
         self.temp_min = data['main']['temp_min']
         self.temp_max = data['main']['temp_max']
 
+
 class WeatherRoot(BoxLayout):
     current_weather = ObjectProperty()
     locations = ObjectProperty()
@@ -88,12 +89,12 @@ class WeatherRoot(BoxLayout):
 
         if self.current_weather is None:
             self.current_weather = CurrentWeather()
-        if self.locations is None:  # <1>
+        if self.locations is None:
             self.locations = Factory.Locations()
 
         if location is not None:
             self.current_weather.location = location
-            if location not in self.locations.locations_list.adapter.data:  # <2>
+            if location not in self.locations.locations_list.adapter.data:
                 self.locations.locations_list.adapter.data.append(location)
                 self.locations.locations_list._trigger_reset_populate()
 
