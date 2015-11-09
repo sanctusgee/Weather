@@ -56,7 +56,7 @@ class AddLocationForm(BoxLayout):
 
 class CurrentWeather(BoxLayout):
     global OPEN_WEATHER_ID
-    location = ListProperty(['New York', 'US'])
+    location = ListProperty(['Dallas', 'US'])
     conditions = StringProperty()
     conditions_image = StringProperty()
     temp = NumericProperty()
